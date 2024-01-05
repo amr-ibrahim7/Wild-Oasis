@@ -1,68 +1,98 @@
-# [The Wild Oasis Cabins](https://wild-oasis-employees.netlify.app/login)
+<div align="center">
+
+  <img src="./public/logo-dark.png" alt="logo" width="90" height="auto">
+  <h2>The Wild Oasis</h2>
+  <hr>
+</div>
+
+<!-- Brief -->
+<p align="center">
+The Wild Oasis hotel management app is a full-featured React web application that allows hotel employees to manage cabins, bookings, and guests. The app uses Supabase for its backend and implements a variety of advanced React techniques, such as HOCs, the Compound Component Pattern, and React Query.
+</p>
+
+# [The Wild Oasis Cabins](https://wild-oasis-employees.netlify.app/)
 
 ### [Application Video](https://vimeo.com/859576638?share=copy)
 
 The Wild di is an management system for hotels inside.
 
-**Technologies:**
+## My process
 
+### Built with
+
+- React
+- Supabase
 - React Query
 - React Router
-- Styled Components
 - React Hook Form
-- Supabase
-- Advanced Compound Component
-- Authentication
+- React Hot Toast
 - Recharts
-- Toasts (Notifications)
-- React Error Boundary
+- Styled Components
 - Vite
 
 ## Features
 
-1. **User Authentication and Signup:**
+- Users of the app are hotel employees. They need to be logged into the application to perform tasks
+- New users can only be signed up inside the applications (to guarantee that only actual hotel employees can get accounts)
+- Users should be able to upload an avatar, and change their name and password
+- App needs a table view with all cabins, showing the cabin photo, name, capacity, price, and current discount
+- Users should be able to update or delete a cabin, and to create new cabins (including uploading a photo)
+- App needs a table view with all bookings, showing arrival and departure dates, status, and paid amount, as well as cabin and guest data
+- The booking status can be "unconfirmed" (booked but not yet checked in), "checked in", or "checked out". The table should be filterable by this important status
+- Other booking data includes: number of guests, number of nights, guest observations, whether they booked breakfast, breakfast price
 
-   - The programme allows hotel staff to log in and carry out tasks.
-   - In order to ensure that only legitimate hotel employees are able to register accounts, new users can only be signed up within the application.
+- Users should be able to delete, check in, or check out a booking as the guest arrives
 
-2. **User Profile Administration:**
+- Bookings may not have been paid yet on guest arrival. Therefore, on check in, users need to accept payment (outside the app), and then confirm that payment has been received (inside the app)
 
-   - Users can post an avatar to their profile to make it more unique.
-   - Users may modify their username and password.
+- On check in, the guest should have the ability to add breakfast for the entire stay, if they hadn't already
+- Guest data should contain: full name, email, national ID, nationality, and a country flag for easy identification
 
-3. **Cabin Administration:**
+- The initial app screen should be a dashboard, to display important information for the last 7, 30, or 90 days:
 
-   - The app provides a table view with all cabins.
-   - The table view shows cabin details such as the name of the cabin, its capacity, price, and any current discounts.
-   - Users have the option to duplicate, edit, or remove existing cabins.
-   - Users have the option to submit a photo when creating new cabins.
+- A list of guests checking in and out on the current day. Users should be able to perform these tasks from here
 
-4. **Booking Management:**
+- Statistics on recent bookings, sales, check ins, and occupancy rate
 
-   - The app provides a table view with all bookings.
-   - The table view displays booking information, including arrival and departure dates, booking status, paid amount, cabin details, and guest data.
-   - Booking status can be "unconfirmed," "checked in," or "checked out."
-   - The table view is filterable by booking status.
-   - Additional booking data includes the number of guests, number of nights, guest observations, and whether breakfast was booked and its price.
+  - A chart showing all daily hotel sales, showing both "total" sales and "extras" sales (only breakfast at the moment)
 
-5. **Booking Operations:**
-   - As the visitor arrives, users have the option to delete, check-in, or check-out a booking.
-   - Users can collect payment outside of the app during check-in and confirm the payment inside the app.
-   - If they haven't already, guests can add breakfast for the duration of their stay at checking in.
-6. **Guest Data Management:**
+  - A chart showing statistics on stay durations, as this is an important metric for the hotel
 
-   - Guest data includes a country flag, full name, email, national ID, and nationality for quick identification.
+- Users should be able to define a few application-wide settings: breakfast price, min and max nights/booking, max guests/booking
 
-7. **Dashboard:**
+- Dark mode
 
-   - The initial app screen serves as a dashboard displaying important information for the last 7, 30, or 90 days.
-   - It shows a list of guests checking in and out on the current day, and users can perform tasks related to these activities from the dashboard.
-   - The dashboard provides statistics on recent bookings, sales, check-ins, and occupancy rates.
-   - It includes a chart showing all daily hotel sales, distinguishing between "total" sales and "extras" sales (only breakfast at present).
-   - There's also a chart displaying statistics on stay durations, an important metric for the hotel.
+### What I Learned
 
-8. **Application-wide Settings:**
-   - Users can define application-wide settings such as breakfast price, minimum and maximum nights per booking, and maximum guests per booking.
+- **React Fundamentals:** I gained a solid understanding of React, including components, state management, and routing, allowing me to build dynamic user interfaces.
+
+- **Authentication and User Management:** I implemented user authentication using Supabase, ensuring secure access for hotel employees and learned to manage user profiles effectively.
+
+- **Form Handling:** I became proficient in managing forms with React Hook Form, simplifying form validation, submission, and data handling.
+
+- **Data Fetching and Caching:** React Query was employed to fetch and cache data, enhancing the performance and responsiveness of the application.
+
+- **Real-time Updates:** I integrated real-time data updates using Supabase, enabling instant changes to cabin and booking data.
+
+- **Responsive UI Design:** Styled Components were used to create responsive and visually appealing user interfaces that adapt to various screen sizes.
+- **Toast Notifications:** React Hot Toast added user-friendly notifications for various actions within the app, improving the overall user experience.
+
+- **Data Visualization:** Recharts was employed for creating charts and visual representations of vital statistics, aiding in data analysis and decision-making.
+
+- **Routing and Navigation:** React Router facilitated smooth navigation and seamless transitions between different views and pages within the application.
+
+- **Settings Management:** I learned to allow users to configure application-wide settings, such as breakfast pricing and booking constraints.
+
+- **Higher-Order Components (HOC):** I utilized Higher-Order Components to enhance code reusability and share common functionalities among multiple components.
+
+- **Compound Component Pattern:** I implemented the Compound Component Pattern to create cohesive and reusable component groups, improving the organization and maintainability of the code.
+- **Dark Mode Implementation:** Dark mode was implemented to offer users a personalized visual experience and accommodate different preferences.
+
+- **Git Version Control:** I practiced effective version control using Git, allowing for code management, and tracking project changes.
+
+- **Project Planning and Management:** I gained experience in planning and managing a large-scale project, including feature development, bug fixing, and testing.
+
+By building "The Wild Oasis" project with these technologies and concepts, I've developed a comprehensive set of skills and knowledge that can be applied to future projects and real-world scenarios. This experience has not only expanded my technical expertise but also improved my problem-solving capabilities.
 
 ## Screenshots
 
